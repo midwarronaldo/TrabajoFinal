@@ -1,0 +1,148 @@
+/* Estilos generales */
+:root {
+    --color-primario: #ff4800ee;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0dfd6;
+    background-image: linear-gradient(to bottom, var(--color-primario) 22%, transparent 0%); /* Color de fondo */
+    background-size: 100% 100%; /* Para que el degradado cubra toda la página */
+}
+
+header, main {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Estilos para la pantalla dividida en dos columnas */
+#foto, #isquierdo {
+    flex: 1;
+    max-width: 33.333%;
+    margin-right: 8%;
+}
+#informacion, #derecho {
+    flex: 2;
+    max-width: 66.667%;
+}
+header{
+    margin: 10% 10% 0 10%;
+}
+
+#foto{
+    margin: 0 auto; /* Centra el contenedor horizontalmente */
+    margin-right: 8%;
+     /* Evita que la imagen se desborde si es más grande que el contenedor */ 
+}
+#foto img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir completamente el contenedor */  
+    border: 10px solid white;
+}
+#foto img:hover{
+    transform: scale(1.05); /* Escala de agrandamiento */
+
+}
+h1{
+    margin: 0%;
+    padding: 0%;
+    font-size: 430%;
+    color: white;
+    }
+#informacion p{
+    color: #f0dfd6;
+    margin-top: 0%;
+    font-size: 180%;
+}
+nav li,a{
+    text-decoration: none;
+    color: white;
+    list-style: none;
+}
+nav li,a:hover{
+    color: rgb(19, 236, 164);
+}
+#color-line{
+    height: 3px;
+    background-color: #fff;
+    width: 10%;
+    margin-top: 5%;
+}
+.texto{
+    color: var(--color-primario);
+    padding: 0%;
+    margin: 25% 0% 0% 0%;
+    font-size: 150%;
+}
+main{
+    margin: 0 10% 10% 10%;
+}
+h2 {
+    background-color: var(--color-primario);
+    color: white;
+    padding: 5px;
+    font-size: 180%;
+    margin-top: 50px;
+}
+.icon{
+    color: var(--color-primario);
+    font-size: 120%;
+}
+h4, p, li {
+    font-size: 120%;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 720px) {
+    header, main {
+        flex-direction: column;
+    }
+    #foto, #informacion, #isquierdo, #derecho {
+        max-width: 100%;
+        align-items: center;
+        align-content: center;
+        text-align: center;
+    }
+    body {
+        background-image: linear-gradient(to bottom, var(--color-primario) 27%, transparent 0%); /* Color de fondo */
+
+    }
+    #foto{
+        margin: auto;
+    }
+}
+/* Estilos para el footer */
+footer {
+    background-color: var(--color-primario);
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+footer button a{
+    color: black;
+}
+footer button a:hover{
+    background-color: var(--color-primario);
+    color: #fff;
+}
+button:hover{
+    color: var(--color-primario);
+}
+#contenedor{
+    width: 64px;
+    position: fixed ;
+    right: 20px;
+    bottom: 20px;
+    justify-content: left;
+    
+  }
